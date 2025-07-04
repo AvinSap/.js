@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Basic Counter App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 50px;
+      }
+      #count {
+        font-size: 48px;
+        margin: 20px;
+      }
+      button {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Counter App</h1>
+    <div id="count">0</div>
+    <button id="incrementBtn">Increment</button>
+    <button id="decrementBtn">Decrement</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+      // Get elements
+      const countEl = document.getElementById("count");
+      const incrementBtn = document.getElementById("incrementBtn");
+      const decrementBtn = document.getElementById("decrementBtn");
+      const resetBtn = document.getElementById("resetBtn");
+
+      // Initial count value
+      let count = 0;
+
+      // Increment function
+      incrementBtn.addEventListener("click", function () {
+        count++;
+        countEl.textContent = count;
+      });
+
+      // Decrement function
+      decrementBtn.addEventListener("click", function () {
+        count--;
+        countEl.textContent = count;
+      });
+
+      // Reset function
+      resetBtn.addEventListener("click", function () {
+        count = 0;
+        countEl.textContent = count;
+      });
+    </script>
+  </body>
+</html>
