@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Manifestation Quote Generator</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #fffafc url("images/gosaikunda.jpg") no-repeat center center;
+        background-size: cover;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .quote {
+        text-align: center;
+        color: blueviolet;
+        padding: 20px;
+        background: #f3f0fa;
+        border-radius: 10px;
+        margin: 20px auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        font-size: 1.5em;
+        max-width: 600px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1em;
+        background: #4b0082;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #6a1ba2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Manifestation Quote Generator</h1>
+    <p id="quote" class="quote"></p>
+    <button onclick="generateQuote()">Get New Quote</button>
+    <script>
+      const quotes = [
+        "What you think, you become. What you feel, you attract. What you imagine, you create. — Buddha",
+        "Your whole life is a manifestation of the thoughts that go on in your head. — Lisa Nichols",
+        "Ask for what you want and be prepared to get it. — Maya Angelou",
+        "Energy flows where attention goes. — Tony Robbins",
+        "You manifest what you believe, not what you want. — Sonia Ricotti",
+        "You are the creator of your own reality. — Abraham Hicks",
+        "Whatever you hold in your mind on a consistent basis is exactly what you will experience in your life. — Tony Robbins",
+        "If people like Elon Musk and Mark Zukerberg did it you aren't any different, So just put your work in, manifest good things, God will look after you - Avin Sapkota.",
+        "Believe you deserve it and the universe will serve it.",
+        "To bring anything into your life, imagine that it’s already there. — Richard Bach",
+      ];
+
+      function generateQuote() {
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+        document.getElementById("quote").innerText = quotes[randomIndex];
+      }
+
+      // Shows an initial quote when the page loads
+      generateQuote();
+    </script>
+  </body>
+</html>
